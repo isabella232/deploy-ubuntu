@@ -14,7 +14,7 @@ spec:
       labels:
         app: job-ubuntu
     spec:
-      restartPolicy: Never
+      restartPolicy: Always
       containers:
       - name: job-ubuntu
         image: ubuntu:latest
@@ -32,4 +32,4 @@ spec:
         args:
           - >-
               echo "Test" &&
-              sleep 60
+              sleep 3600
