@@ -12,7 +12,7 @@ spec:
   template:
     metadata:
       labels:
-        app: job-ubuntu-test
+        app: job-ubuntu
     spec:
       restartPolicy: Never
       containers:
