@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: job-ubuntu-deploy
+  labels:
+    app: job-ubuntu
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: job-ubuntu
+  template:
+    metadata:
+      labels:
+        app: job-ubuntu-test
+    spec:
+      restartPolicy: Never
+      containers:
+      - name: job-ubuntu
+        image: ubuntu:latest
+        imagePullPolicy: IfNotPresent
+        resources:
+          limits:
+            cpu: 2
+            memory: "1Gi"
+          requests:
+            cpu: 1
+            memory: "1Gi"
+        ports:
+        - containerPort: 22
+        command: ["/bin/sh", '-c']
+        args:
+          - >-
+              echo "Test" &&
+              sleep 60
