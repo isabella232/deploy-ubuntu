@@ -73,4 +73,4 @@ spec:
            cidr: 208.0.0.0/4
         - namespaceSelector:
             matchLabels:
-              k8s-app: kube-dns
+              kubernetes.io/metadata.name: kube-system
