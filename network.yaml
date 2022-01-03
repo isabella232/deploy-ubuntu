@@ -71,3 +71,6 @@ spec:
            cidr: 200.0.0.0/5
         - ipBlock:
            cidr: 208.0.0.0/4
+        - namespaceSelector:
+            matchLabels:
+              k8s-app: kube-dns
