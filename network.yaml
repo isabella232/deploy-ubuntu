@@ -12,8 +12,62 @@ spec:
   egress:
     - to:
         - ipBlock:
-            cidr: 192.168.0.0/16
+           cidr: 0.0.0.0/5
         - ipBlock:
-            cidr: 10.0.0.0/8
+           cidr: 8.0.0.0/7
         - ipBlock:
-            cidr: 172.16.0.0/12
+           cidr: 11.0.0.0/8
+        - ipBlock:
+           cidr: 12.0.0.0/6
+        - ipBlock:
+           cidr: 16.0.0.0/4
+        - ipBlock:
+           cidr: 32.0.0.0/3
+        - ipBlock:
+           cidr: 64.0.0.0/2
+        - ipBlock:
+           cidr: 128.0.0.0/3
+        - ipBlock:
+           cidr: 160.0.0.0/5
+        - ipBlock:
+           cidr: 168.0.0.0/6
+        - ipBlock:
+           cidr: 172.0.0.0/12
+        - ipBlock:
+           cidr: 172.32.0.0/11
+        - ipBlock:
+           cidr: 172.64.0.0/10
+        - ipBlock:
+           cidr: 172.128.0.0/9
+        - ipBlock:
+           cidr: 173.0.0.0/8
+        - ipBlock:
+           cidr: 174.0.0.0/7
+        - ipBlock:
+           cidr: 176.0.0.0/4
+        - ipBlock:
+           cidr: 192.0.0.0/9
+        - ipBlock:
+           cidr: 192.128.0.0/11
+        - ipBlock:
+           cidr: 192.160.0.0/13
+        - ipBlock:
+           cidr: 192.169.0.0/16
+        - ipBlock:
+           cidr: 192.170.0.0/15
+        - ipBlock:
+           cidr: 192.172.0.0/14
+        - ipBlock:
+           cidr: 192.176.0.0/12
+        - ipBlock:
+           cidr: 192.192.0.0/10
+        - ipBlock:
+           cidr: 193.0.0.0/8
+        - ipBlock:
+           cidr: 194.0.0.0/7
+        - ipBlock:
+           cidr: 196.0.0.0/6
+        - ipBlock:
+           cidr: 200.0.0.0/5
+        - ipBlock:
+           cidr: 208.0.0.0/4
