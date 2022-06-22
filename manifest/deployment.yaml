@@ -1,32 +1,32 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: job-ubuntu-deploy
-  namespace: dev
+  name: test-ubuntu-deploy
+  namespace: default
   labels:
-    app: job-ubuntu
+    app: test-ubuntu
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: job-ubuntu
+      app: test-ubuntu
   template:
     metadata:
       labels:
-        app: job-ubuntu
+        app: test-ubuntu
     spec:
       restartPolicy: Always
       containers:
-      - name: job-ubuntu
+      - name: test-ubuntu
         image: ubuntu:latest
         imagePullPolicy: IfNotPresent
         resources:
           limits:
-            cpu: 2
-            memory: "1Gi"
+            cpu: 4
+            memory: "4Gi"
           requests:
-            cpu: 1
-            memory: "1Gi"
+            cpu: 2
+            memory: "4Gi"
         ports:
         - containerPort: 22
         command: ["/bin/sh", '-c']

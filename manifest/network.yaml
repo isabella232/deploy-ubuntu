@@ -1,12 +1,12 @@
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: job-ubuntu-network-policy
+  name: test-ubuntu-network-policy
   namespace: dev
 spec:
   podSelector:
     matchLabels:
-      app: job-ubuntu
+      app: test-ubuntu
   policyTypes:
     - Egress
   egress:
