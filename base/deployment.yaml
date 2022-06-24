@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: test-ubuntu-deploy
-  namespace: crazy-ubuntu
   labels:
     app: test-ubuntu
 spec:
